@@ -236,7 +236,7 @@ class forms_widget_custom_elementor  extends \Elementor\Widget_Base {
 			[
 				'name' => 'content_typography1',
 				'label' => esc_html__( 'Title Typography', 'redirect-forms' ),
-				'selector' => '{{WRAPPER}} h2',
+				'selector' => '{{WRAPPER}} .forms_redirect h2',
 			]
 		);		
 		
@@ -245,7 +245,7 @@ class forms_widget_custom_elementor  extends \Elementor\Widget_Base {
 			[
 				'name' => 'content_typography2',
 				'label' => esc_html__( 'Sub Title Typography', 'redirect-forms' ),
-				'selector' => '{{WRAPPER}} p',
+				'selector' => '{{WRAPPER}} .forms_redirect p',
 			]
 		);
 		
@@ -254,7 +254,7 @@ class forms_widget_custom_elementor  extends \Elementor\Widget_Base {
 			[
 				'name' => 'content_typography3',
 				'label' => esc_html__( 'Button Typography', 'redirect-forms' ),
-				'selector' => '{{WRAPPER}} button.getQuoteBtn',
+				'selector' => '{{WRAPPER}} .forms_redirect button.getQuoteBtn',
 			]
 		);
 
@@ -264,7 +264,7 @@ class forms_widget_custom_elementor  extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Button Color', 'redirect-forms' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} button.getQuoteBtn' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .forms_redirect button.getQuoteBtn' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -275,7 +275,7 @@ class forms_widget_custom_elementor  extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Header Background Color', 'redirect-forms' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .quote-form-title' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .forms_redirect .quote-form-title' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -286,7 +286,7 @@ class forms_widget_custom_elementor  extends \Elementor\Widget_Base {
 				'label' => esc_html__( 'Body Background Color', 'redirect-forms' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .quote-form-body' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .forms_redirect .quote-form-body' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -361,7 +361,7 @@ class forms_widget_custom_elementor  extends \Elementor\Widget_Base {
 			}
 		
         </style>
-        <form class="quote-form rounded large <?php echo $randomletter; ?>">
+        <form class="forms_redirect quote-form rounded large <?php echo $randomletter; ?>">
             <div class="quote-form-title">
                 <h2><?php echo $settings['widget_title']; ?></h2>
             </div>
